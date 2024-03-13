@@ -1,6 +1,6 @@
 
 Usage:   
-  pip <command> [options]
+  pip <install> [options]
 
 Commands:
   install                     Install packages.
