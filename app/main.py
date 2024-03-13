@@ -6,6 +6,7 @@ from . import models
 
 app = FastAPI()
 
+
 models.Base.metadata.create_all(engine)
 
 
