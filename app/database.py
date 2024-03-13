@@ -4,9 +4,9 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.engine import URL
 from .config import settings
 
-url = URL.create('postgresql', username=settings.database_username, password=settings.database_password, host=settings.database_hostname,port=settings.database_port, database=settings.database_name)
+# url = URL.create('postgresql', username=settings.database_username, password=settings.database_password, host=settings.database_hostname,port=settings.database_port, database=settings.database_name)
 
-engine = create_engine(url=url)
+engine = create_engine(url=settings.database_url)
 
 SessionLocal = sessionmaker(autoflush= False, bind=engine)
 

@@ -11,7 +11,7 @@ router = APIRouter(tags=['input'])
 def get_url(long_url: str = Query(...), db: Session = Depends(get_db)):
     
     url = db.query(models.Url).filter(models.Url.original_url == long_url).first()
-    print(url.original_url)
+    # print(url.original_url)
     if url :
         return{
             "short_url": url.short_url
