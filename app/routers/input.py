@@ -21,5 +21,5 @@ def get_url(long_url: str = Query(...), db: Session = Depends(get_db)):
     db.add(new_entry)
     db.commit()
 
-    return {"short_url": short_key}
+    return {"short_url": f"https://url-shortner-1-wcns.onrender.com/{short_key}"}
 
