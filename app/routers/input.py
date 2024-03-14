@@ -14,7 +14,7 @@ def get_url(long_url: str = Query(...), db: Session = Depends(get_db)):
     # print(url.original_url)
     if url :
         return{
-            "short_url": url.short_url
+            "short_url": f"https://url-shortner-1-wcns.onrender.com/{url.short_url}"
         }
     short_key = generate_random_key()
     new_entry = models.Url(original_url=long_url, short_url=short_key)
